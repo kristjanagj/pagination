@@ -1,5 +1,4 @@
 {
-  "name": "api-pagination",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -34,5 +33,11 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.5.2"
-  }
+  },
+    "items": [
+      { "id": 1, "name": "Item 1" },
+      { "id": 2, "name": "Item 2" }
+    ],
+    "totalPages": 5,
+    "currentPage": 1
 }
