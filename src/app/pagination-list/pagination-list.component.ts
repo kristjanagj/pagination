@@ -24,7 +24,7 @@ export class PaginatedListComponent implements OnInit {
 
   loadData(): void {
     this.dataService.getData(this.currentPage, this.pageSize).subscribe(response => {
-      this.data = response.items; // Adjust based on your API response structure
+      this.data = response.results; // Adjust based on your API response structure
       this.totalPages = response.totalPages; // Adjust based on your API response structure
     });
   }
