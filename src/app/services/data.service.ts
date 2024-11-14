@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class DataService {
   private apiUrl =
     'https://api.themoviedb.org/3/search/movie?query=batman&api_key=acd9f928cbd7f0a07860670377c1fad4'; // Replace with your API endpoint
-  private apiKey = 'acd9f928cbd7f0a07860670377c1fad4';
+  // private apiKey = 'acd9f928cbd7f0a07860670377c1fad4';
 
   constructor(private http: HttpClient) {}
 

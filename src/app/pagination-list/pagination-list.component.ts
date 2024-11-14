@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-pagination-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './pagination-list.component.html',
   styleUrl: './pagination-list.component.css'
 })
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class PaginatedListComponent implements OnInit {
   data: any[] = [];
   currentPage: number = 1;
-  totalPages: number = 1;
+  totalPages: number = 5;
   pageSize: number = 10; // Items per page
 
   constructor(private dataService: DataService) {}
