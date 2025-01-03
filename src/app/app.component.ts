@@ -12,6 +12,6 @@ import { PaginatedListComponent } from "./pagination-list/pagination-list.compon
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'api-pagination';
+  title = 'API Pagination';
 }
 

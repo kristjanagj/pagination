@@ -1,16 +1,17 @@
-<div *ngIf="data.length">
-<ul>
-    <li *ngFor="let item of data">{{ item.title }}</li> 
-</ul>
+<div class="container">
+    <div *ngIf="data.length">
+    <ul>
+        <li *ngFor="let item of data | slice:0:5">{{ item.title }}</li> 
+    </ul>
 
-<div class="pagination">
-    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
-    <span>Page {{ currentPage }} of {{ totalPages }}</span>
-    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
-</div>
-</div>
+    <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage >= totalPages">Next</button>
+    </div>
+    </div>
 
-<div *ngIf="!data.length">
-<p>No data available.</p>
+    <div *ngIf="!data.length">
+    <p>No data available.</p>
+    </div>
 </div>
-
