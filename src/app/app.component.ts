@@ -5,10 +5,7 @@ import { PaginatedListComponent } from "./pagination-list/pagination-list.compon
   selector: 'app-root',
   standalone: true,
   imports: [PaginatedListComponent],
-  template: `
-    <h1>{{ title }}</h1>
-    <app-pagination-list></app-pagination-list>
-  `,
+  templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {

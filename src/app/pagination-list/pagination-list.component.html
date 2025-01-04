@@ -1,13 +1,19 @@
-<div class="container">
+<div class="container mx-auto">
     <div *ngIf="data.length">
-    <ul>
-        <li *ngFor="let item of data | slice:0:5">{{ item.title }}</li> 
+    <ul class="list-none">
+        <li *ngFor="let item of data | slice:0:5" class="py-2">{{ item.title }}</li> 
     </ul>
 
     <div class="pagination">
-        <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <button (click)="previousPage()" [class.bg-gray-300]="currentPage === 1"
+        [class.text-gray-500]="currentPage === 1"
+        [class.cursor-not-allowed]="currentPage === 1"
+        [class.bg-blue-500]="currentPage !== 1"
+        [class.text-white]="currentPage !== 1"
+        [disabled]="currentPage === 1"
+        class="px-4 py-2 rounded">Previous</button>
         <span>Page {{ currentPage }} of {{ totalPages }}</span>
-        <button (click)="nextPage()" [disabled]="currentPage >= totalPages">Next</button>
+        <button (click)="nextPage()" [disabled]="currentPage >= totalPages" class="bg-blue-500 text-white px-4 py-2 rounded">Next</button>
     </div>
     </div>
 

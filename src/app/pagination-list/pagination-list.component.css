@@ -4,15 +4,12 @@
 span {
     padding: 0px 8px;
 }
-button {
+/* button {
     background-color: #b5c9f5;
     border: 1px solid #8f8fff;
     padding: 5px;
-}
-ul li {
-    padding: 5px;
-    list-style: none;
-}
+} */
+
 .pagination {
     margin-top: 30px;
 }
